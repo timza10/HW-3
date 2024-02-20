@@ -1,8 +1,10 @@
-a=5
-b=6
+a = 6
+b = 7
+c = 8
 
-if(a>b):
-    print("Min value is b")
-
-if(b>a):
+if a < b and a < c:
     print("Min value is a")
+elif b < a and b < c:
+    print("Min value is b")
+elif c < a and c < b:
+    print("Min value is c")
