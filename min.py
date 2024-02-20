@@ -1,10 +1,15 @@
-a = 6
-b = 7
-c = 8
+def is_palindrome(word):
+    word = word.lower()
 
-if a < b and a < c:
-    print("Min value is a")
-elif b < a and b < c:
-    print("Min value is b")
-elif c < a and c < b:
-    print("Min value is c")
+    return word == word[::-1]
+
+def main():
+    user_input = input("Введіть слово: ")
+
+    if is_palindrome(user_input):
+        print("Це слово - паліндром!")
+    else:
+        print("Цеслово неє паліндромом.")
+
+if __name__ == "__main__":
+    main()    
