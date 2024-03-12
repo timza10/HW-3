@@ -1,15 +1,10 @@
-def is_palindrome(word):
-    word = word.lower()
+def min_n_variables(elements):
+    second = elements[0]
+    for x in elements:
+      if x < second:
+       second = x
+    return second
 
-    return word == word[::-1]
-
-def main():
-    user_input = input("Введіть слово: ")
-
-    if is_palindrome(user_input):
-        print("Це слово - паліндром!")
-    else:
-        print("Цеслово неє паліндромом.")
-
-if __name__ == "__main__":
-    main()    
+elements = [3,5,8,4,9,6]
+print('second of elements=', min_n_variables(elements))
+ 
