@@ -1,10 +1,13 @@
-def min_n_variables(elements):
-    second = elements[0]
-    for x in elements:
-      if x < second:
-       second = x
-    return second
+def is_palindrom(word):
+  new_word = ''
+  for x in word:
+    new_word = x + new_word
+  if new_word == word:
+    result = 'palindrom'
+  else:
+    result = 'not palindrom'
+  return result
+w = 'mam'
+assert is_palindrom(w) == 'palindrom'
 
-elements = [3,5,8,4,9,6]
-print('second of elements=', min_n_variables(elements))
- 
+# print(is_palindrom(w))
